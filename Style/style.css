@@ -6,7 +6,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-image: url('../Style/Planets2.png');
+    background-image: url('../Style/Planets2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
