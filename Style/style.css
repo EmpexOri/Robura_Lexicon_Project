@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Style/Planets2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-family: Arial, sans-serif;
+    color: white; /* Ensures the text is readable over the background image */
+}
+
+header, footer {
+    background-color: rgba(212, 212, 212, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+main {
+    flex: 1; /* This makes main take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(212, 212, 212, 0.5);
+    border-radius: 8px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.left-column:hover, .right-column:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Change hue when hovered over */
+}
+
+.contact {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(212, 212, 212, 0.5);
+    border-radius: 8px;
+}
+
+footer {
+    /* Ensure footer is at the bottom */
+    background-color: rgba(212, 212, 212, 0.5);
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Link styling */
+a {
+    color: #4534E0; /* Primary color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color and background color */
+}
+
+a:hover {
+    color: #141414; /* Color on hover */
+    background-color: #00bcd4; /* Background color on hover */
+    padding: 2px 4px; /* Add some padding for better look */
+    border-radius: 4px; /* Rounded corners for better aesthetics */
+}
