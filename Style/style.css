@@ -109,3 +109,9 @@ a:hover {
 header, .left-column, .right-column, .contact, footer {
     animation: fadeInUp 1s ease-out; /* Apply animation */
 }
+
+.PDF_updates {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    font-size: x-small;
+}
