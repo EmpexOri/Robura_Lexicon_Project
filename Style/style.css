@@ -1,76 +1,157 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: hidden; /* Prevent scrolling due to animation */
 }
 
 body {
     display: flex;
     flex-direction: column;
-    background-image: url('../Style/Planets2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-    font-family: 'Times New Roman', Times, serif; /* Change to Times New Roman */
-    color: white; /* Ensures the text is readable over the background image */
-}
-
-header, footer {
-    background-color: rgba(212, 212, 212, 0.5);
+    background-color: #000000; /* Fallback background color */
+    font-family: 'Arial', sans-serif;
     color: white;
-    padding: 5px 10px;
-    text-align: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease; /* Remove transform property */
+    position: relative; /* Ensure content is above the canvas */
 }
 
-header:hover, footer:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Change hue when hovered over */
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place canvas behind the content */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffb74d;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ffb74d;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #ffffff;
+    background-color: #ffb74d;
+    border-radius: 5px;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
 }
 
 main {
-    flex: 1; /* This makes main take up the remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 10px; /* Adjust padding */
+    align-items: center;
+    padding: 20px;
 }
 
 .content-wrapper {
     display: flex;
-    justify-content: center; /* Center columns */
+    justify-content: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .left-column, .right-column {
     flex: 1;
-    margin: 10px; /* Reduce margin */
-    padding: 10px;
-    max-width: 45%; /* Limit the width to prevent overflow */
-    background-color: rgba(212, 212, 212, 0.5);
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color change and transform */
+    margin: 10px;
+    padding: 20px;
+    max-width: 45%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 0px 15px rgba(255, 183, 77, 0.5);
 }
 
 .left-column:hover, .right-column:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Change hue when hovered over */
-    transform: scale(1.05); /* Slightly scale up on hover */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
 }
 
 .contact {
-    margin: 5px; /* Reduce margin */
-    padding: 10px;
-    background-color: rgba(212, 212, 212, 0.5);
-    border-radius: 8px;
-    transition: background-color 0.3s ease; /* Remove transform property */
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(255, 183, 77, 0.5);
 }
 
 .contact:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Change hue when hovered over */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 footer {
-    /* Ensure footer is at the bottom */
-    background-color: rgba(212, 212, 212, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb74d;
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 2px solid #ffb74d;
+}
+
+footer a {
+    color: #ffb74d;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+    color: #3e2723;
+    background-color: #ffb74d;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+div a {
+    color: #ffb74d; /* Color on hover */
+}
+
+div a:hover {
+    color: #ffffff; /* Color on hover */
+    background-color: #ffb74d; /* Background color on hover */
+    padding: 2px 4px; /* Add some padding for better look */
+    border-radius: 4px; /* Rounded corners for better aesthetics */
+    text-decoration: underline; /* Underline on hover */
 }
 
 h1, h2 {
@@ -78,23 +159,6 @@ h1, h2 {
     padding: 10px 0;
 }
 
-/* Link styling */
-a {
-    color: #85f8fc; /* Primary color for links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color and background color */
-}
-
-a:hover {
-    color: #141414; /* Color on hover */
-    background-color: #85f8fc; /* Background color on hover */
-    padding: 2px 4px; /* Add some padding for better look */
-    border-radius: 4px; /* Rounded corners for better aesthetics */
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Add animation to sections */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -107,7 +171,7 @@ a:hover {
 }
 
 header, .left-column, .right-column, .contact, footer {
-    animation: fadeInUp 1s ease-out; /* Apply animation */
+    animation: fadeInUp 1s ease-out;
 }
 
 .PDF_updates {
