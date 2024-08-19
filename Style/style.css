@@ -227,11 +227,3 @@ header, .left-column, .right-column, .contact, footer {
     background-color: rgba(255, 255, 255, 0.1);
     transform: scale(1.05);
 }
-
-/* Media query to adjust the layout on smaller screens */
-@media (max-width: 768px) {
-    .updates-column {
-        max-width: 90%;
-        max-height: 300px;
-    }
-}
