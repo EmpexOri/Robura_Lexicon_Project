@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A home for the world of Robura">
     <meta name="author" content="Your Name">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <title>Rules & Supplements - Robura Lexicon</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="Style/style.css">
     <link rel="icon" href="Style/Icon.png" type="image/x-icon">
     <meta name="google-site-verification" content="qA4OAvZOh4hrwvim-OxVYAljm6fb6adw0z9IjNmoVfs" />
@@ -13,59 +18,88 @@
 <body>
     <canvas id="backgroundCanvas"></canvas>
     <canvas id="solarCanvas"></canvas>
-    <header>
-        <h1>Rules & Supplements</h1>
-        <span class="menu-icon" id="menuIcon">&#9776;</span>
+
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3 m-0">Rules & Supplements</h1>
+            <span class="menu-icon" id="menuIcon" style="cursor:pointer;">&#9776;</span>
+        </div>
     </header>
 
-    <nav id="sideMenu" class="side-menu">
-        <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="rules.html">Rules & Supplements</a>
-        <a href="texts.html">Written Texts</a>
+    <!-- Sidebar -->
+    <nav id="sideMenu" class="side-menu bg-light p-3">
+        <a href="javascript:void(0)" class="btn-close float-end" id="closeBtn" aria-label="Close"></a>
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="rules.html">Rules & Supplements</a></li>
+            <li class="nav-item"><a class="nav-link" href="texts.html">Written Texts</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <div class="content-wrapper">
-            <section class="left-column">
-                <h2>Core Rules</h2>
-                <ul>
-                    <li><a href="PDF/Robura - Grinding-Annihilation Core Rules.pdf">Core Rules PDF</a></li>
-                </ul>
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Core Rules -->
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">Core Rules</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="PDF/Robura - Grinding-Annihilation Core Rules.pdf" class="link-primary">Core Rules PDF</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
-            <section class="right-column">
-                <h2>Army Lexicons</h2>
-                <ul>
-                    <li><a href="PDF/P.O.U's - Righteous & Equal Military - P.O.U's - Righteous & Equal Military.pdf">POU - REM Army Lexicon PDF</a></li>
-                    <li><a href="PDF/P.O.U- Conciliar Skolurgy.pdf">POU- Conciliar Skolurgy Army Lexicon PDF</a></li>
-                    <li><a href="PDF/Autereium’s - Sekte Infinite - Autereium’s - Sekte Infinite.pdf">Autereium - Sekte Infinite Army Lexicon PDF</a></li>
-                    <li><a href="PDF/Kolkata Alliance - Kolkatan Armiya Giantchesky.pdf">Kolkata Alliance - Kolkatan Armiya Army Lexicon PDF</a></li>
-                    <li><a href="PDF/Kolkata Alliance - Titanchesky.pdf">Kolkata Alliance - Titanchesky Army Lexicon PDF</a></li>
-                    <li><a href="PDF/Rassa Moxol - Hakarak of Jian'Ha.pdf">Rassa-Moxol - Hakarak of Jian'Ha Army Lexicon PDF</a></li>
-                </ul>
-                <p class="PDF_updates">Last Updated: 04/08/2024</p>
+
+            <!-- Army Lexicons -->
+            <section class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white">Army Lexicons</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="PDF/P.O.U's - Righteous & Equal Military - P.O.U's - Righteous & Equal Military.pdf">POU - REM Army Lexicon PDF</a></li>
+                        <li class="list-group-item"><a href="PDF/P.O.U- Conciliar Skolurgy.pdf">POU- Conciliar Skolurgy</a></li>
+                        <li class="list-group-item"><a href="PDF/Autereium’s - Sekte Infinite - Autereium’s - Sekte Infinite.pdf">Autereium - Sekte Infinite</a></li>
+                        <li class="list-group-item"><a href="PDF/Kolkata Alliance - Kolkatan Armiya Giantchesky.pdf">Kolkata Alliance - Kolkatan Armiya</a></li>
+                        <li class="list-group-item"><a href="PDF/Kolkata Alliance - Titanchesky.pdf">Kolkata Alliance - Titanchesky</a></li>
+                        <li class="list-group-item"><a href="PDF/Rassa Moxol - Hakarak of Jian'Ha.pdf">Rassa-Moxol - Hakarak of Jian'Ha</a></li>
+                    </ul>
+                    <div class="card-footer text-muted text-end small">Last Updated: 04/08/2024</div>
+                </div>
             </section>
-            <section class="right-column">
-                <h2>External Links</h2>
-                <ul>
-                    <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3256915331" target="_blank">Steam Workshop - Proxies</a></li>
-                </ul>
+
+            <!-- External Links -->
+            <section class="col-12">
+                <div class="card">
+                    <div class="card-header bg-info text-white">External Links</div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3256915331" target="_blank">Steam Workshop - Proxies</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 EmpexOri. All rights reserved.</p>
-        <p>Contact us at: <a href="mailto:EmpexOri@gmail.com">EmpexOri@gmail.com</a> or: <a href="https://twitter.com/GJEmpex">Twitter</a></p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-1">&copy; 2024 EmpexOri. All rights reserved.</p>
+        <p class="mb-0">
+            Contact: <a href="mailto:EmpexOri@gmail.com" class="text-white">EmpexOri@gmail.com</a> |
+            <a href="https://twitter.com/GJEmpex" class="text-white" target="_blank">Twitter</a>
+        </p>
     </footer>
 
+    <!-- Scripts -->
     <script src="Scripts/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-91E5Y0HPYT"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-91E5Y0HPYT');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-91E5Y0HPYT');
     </script>
 </body>
 </html>
