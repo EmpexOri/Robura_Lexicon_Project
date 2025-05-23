@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A home for the world of Robura">
-    <meta name="author" content="Your Name">
-    <title>Written Texts - Robura Lexicon</title>
+    <meta name="description" content="Explore the books and lore of Robura - A universe of high fantasy and chaos.">
+    <meta name="author" content="EmpexOri">
+    <title>Written Texts | Robura Lexicon</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="Written Texts | Robura Lexicon">
+    <meta property="og:description" content="Explore the books and lore of Robura - A universe of high fantasy and chaos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourdomain.com/Style/Icon.png">
+    <meta property="og:url" content="https://yourdomain.com/texts.html">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Written Texts | Robura Lexicon">
+    <meta name="twitter:description" content="Explore the books and lore of Robura - A universe of high fantasy and chaos.">
+    <meta name="twitter:image" content="https://yourdomain.com/Style/Icon.png">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="qA4OAvZOh4hrwvim-OxVYAljm6fb6adw0z9IjNmoVfs" />
+
+    <!-- Styles & Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style/style.css">
     <link rel="icon" href="Style/Icon.png" type="image/x-icon">
-    <meta name="google-site-verification" content="qA4OAvZOh4hrwvim-OxVYAljm6fb6adw0z9IjNmoVfs" />
 </head>
 <body>
-    <canvas id="backgroundCanvas"></canvas>
-    <canvas id="solarCanvas"></canvas>
+    <!-- Background -->
+    <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
+    <canvas id="solarCanvas" aria-hidden="true"></canvas>
 
     <!-- Header -->
     <header class="bg-dark text-white py-4">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="h3 m-0">Written Texts</h1>
-            <span class="menu-icon" id="menuIcon" style="cursor:pointer;">&#9776;</span>
+            <button class="menu-icon btn btn-link text-white" id="menuIcon" aria-label="Open Navigation Menu">&#9776;</button>
         </div>
     </header>
 
     <!-- Sidebar -->
-    <nav id="sideMenu" class="side-menu bg-light p-3">
-        <a href="javascript:void(0)" class="btn-close float-end" id="closeBtn" aria-label="Close"></a>
+    <nav id="sideMenu" class="side-menu bg-light p-3" aria-label="Main Navigation">
+        <button class="btn-close float-end" id="closeBtn" aria-label="Close Navigation Menu"></button>
         <ul class="nav flex-column mt-4">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="rules.html">Rules & Supplements</a></li>
-            <li class="nav-item"><a class="nav-link" href="texts.html">Written Texts</a></li>
+            <li class="nav-item"><a class="nav-link active" href="texts.html" aria-current="page">Written Texts</a></li>
         </ul>
     </nav>
 
@@ -40,24 +56,24 @@
     <main class="container my-5">
         <div class="row g-4">
             <!-- Books -->
-            <section class="col-md-6">
+            <section class="col-md-6" aria-labelledby="books-header">
                 <div class="card">
-                    <div class="card-header bg-secondary text-white">Books</div>
+                    <h2 class="card-header bg-secondary text-white h5" id="books-header">Books</h2>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <a href="PDF/Books/Robura_ Slaughter Arrayed.pdf" class="link-secondary">
                                 Robura: Slaughter Arrayed
                             </a>
-                            <span class="text-muted small ms-2">(By: <a href="https://twitter.com/NotAnAlbanian" target="_blank">@Fishy</a>)</span>
+                            <span class="text-muted small ms-2">(By: <a href="https://twitter.com/NotAnAlbanian" target="_blank" rel="noopener noreferrer">@Fishy</a>)</span>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Placeholder / Future Content -->
-            <section class="col-md-6">
+            <!-- Placeholder -->
+            <section class="col-md-6" aria-labelledby="construction-header">
                 <div class="card">
-                    <div class="card-header bg-warning text-dark">Under Construction</div>
+                    <h2 class="card-header bg-warning text-dark h5" id="construction-header">Under Construction</h2>
                     <div class="card-body">
                         <p class="mb-0">This section is currently under development. More content will be added soon!</p>
                     </div>
@@ -71,7 +87,7 @@
         <p class="mb-1">&copy; 2024 EmpexOri. All rights reserved.</p>
         <p class="mb-0">
             Contact: <a href="mailto:EmpexOri@gmail.com" class="text-white">EmpexOri@gmail.com</a> |
-            <a href="https://twitter.com/GJEmpex" class="text-white" target="_blank">Twitter</a>
+            <a href="https://twitter.com/GJEmpex" class="text-white" target="_blank" rel="noopener noreferrer">Twitter</a>
         </p>
     </footer>
 
